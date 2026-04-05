@@ -63,6 +63,30 @@
     }, { passive: true });
   };
 
+  const initMobileMenu = () => {
+    const toggle = $("[data-menu-toggle]");
+    const menu = $("[data-mobile-menu]");
+    if (!toggle || !menu) return;
+
+    const setOpen = (open) => {
+      menu.classList.toggle("is-open", open);
+      toggle.setAttribute("aria-expanded", open ? "true" : "false");
+      document.body.classList.toggle("menu-open", open);
+    };
+
+    toggle.addEventListener("click", () => {
+      setOpen(!menu.classList.contains("is-open"));
+    });
+
+    $$("a", menu).forEach((link) => {
+      link.addEventListener("click", () => setOpen(false));
+    });
+
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 1024) setOpen(false);
+    });
+  };
+
   const initParallax = () => {
     const items = $$("[data-parallax]");
     if (!items.length || prefersReducedMotion) return;
@@ -123,6 +147,7 @@
   });
   revealOnScroll();
   initNavbar();
+  initMobileMenu();
   initParallax();
   initSmoothHashLinks();
   initPressFeedback();

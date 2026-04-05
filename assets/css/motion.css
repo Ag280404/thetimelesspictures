@@ -1,0 +1,130 @@
+:root {
+  --motion-ease-premium: cubic-bezier(0.22, 1, 0.36, 1);
+  --motion-duration-load: 620ms;
+  --motion-duration-hover: 240ms;
+  --motion-duration-nav: 320ms;
+  --motion-distance: 16px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+.motion-nav {
+  transition:
+    transform var(--motion-duration-nav) var(--motion-ease-premium),
+    background-color var(--motion-duration-nav) var(--motion-ease-premium),
+    box-shadow var(--motion-duration-nav) var(--motion-ease-premium),
+    border-color var(--motion-duration-nav) var(--motion-ease-premium);
+  will-change: transform;
+}
+
+.motion-nav.is-hidden {
+  transform: translateY(-100%);
+}
+
+.motion-nav.is-elevated {
+  box-shadow: 0 18px 60px rgba(15, 23, 42, 0.2);
+}
+
+[data-load],
+[data-reveal] {
+  opacity: 0;
+  transform: translate3d(0, var(--motion-distance), 0) scale(0.985);
+  transition:
+    opacity var(--motion-duration-load) var(--motion-ease-premium),
+    transform var(--motion-duration-load) var(--motion-ease-premium);
+  will-change: transform, opacity;
+}
+
+body.is-loaded [data-load],
+[data-reveal].is-visible {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
+[data-load] {
+  transition-delay: calc(var(--motion-order, 0) * 100ms);
+}
+
+[data-reveal="scale"] {
+  transform: translate3d(0, 18px, 0) scale(0.98);
+}
+
+[data-parallax] {
+  will-change: transform;
+  transform: translate3d(0, 0, 0);
+  transition: transform 80ms linear;
+}
+
+a[href],
+button,
+.motion-card {
+  transition:
+    transform var(--motion-duration-hover) var(--motion-ease-premium),
+    box-shadow var(--motion-duration-hover) var(--motion-ease-premium),
+    opacity var(--motion-duration-hover) var(--motion-ease-premium),
+    background-color var(--motion-duration-hover) var(--motion-ease-premium),
+    border-color var(--motion-duration-hover) var(--motion-ease-premium);
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.motion-button:hover,
+a[href].motion-button:hover,
+button.motion-button:hover {
+  transform: scale(1.04);
+  box-shadow: 0 18px 44px rgba(15, 23, 42, 0.12);
+}
+
+.motion-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 70px rgba(15, 23, 42, 0.12);
+}
+
+.is-pressing {
+  transform: scale(0.97) !important;
+}
+
+input,
+textarea,
+select {
+  transition:
+    box-shadow 220ms var(--motion-ease-premium),
+    border-color 220ms var(--motion-ease-premium),
+    background-color 220ms var(--motion-ease-premium);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 5px rgba(59, 130, 246, 0.12);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-nav,
+  [data-load],
+  [data-reveal],
+  [data-parallax],
+  a[href],
+  button,
+  .motion-card,
+  input,
+  textarea,
+  select {
+    transition: none !important;
+    animation: none !important;
+    transform: none !important;
+    opacity: 1 !important;
+    will-change: auto !important;
+  }
+}

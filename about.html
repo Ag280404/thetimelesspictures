@@ -3,159 +3,134 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0c10" />
-  <title>About — The Timeless Pictures</title>
-  <meta name="description" content="About The Timeless Pictures: cinematic and luxury photography & films." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="theme-color" content="#0F172A" />
+  <title>About | The Timeless Pictures</title>
+  <meta name="description" content="About The Timeless Pictures, a modern cinematic storytelling studio for weddings, films, and premium visual work." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ["Inter", "sans-serif"] },
+          colors: {
+            ink: "#111111",
+            muted: "#6B7280",
+            paper: "#F5F5F5",
+            brand: "#3B82F6",
+            night: "#0F172A"
+          },
+          boxShadow: {
+            soft: "0 20px 60px rgba(15, 23, 42, 0.08)"
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="logo" href="index.html" aria-label="The Timeless Pictures Home">
-      <b>The Timeless Pictures</b>
-      <span>Cinematic • Luxury • Storytelling</span>
-    </a>
-
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I’d like to book a shoot. Please share availability & packages." href="#">WhatsApp</a>
-    </nav>
-
-    <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false">
-      <span>☰</span>
-    </button>
-  </div>
-  <div id="mobile" class="mobile" aria-label="Mobile menu">
-    <div class="container">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a>
-      <a href="contact.html">Contact</a>
-      <a class="js-wa" data-msg="Hi The Timeless Pictures, I’d like to book a shoot. Please share availability & packages." href="#">Enquire on WhatsApp</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="section">
-    <div class="container">
-      <p class="kicker">About</p>
-      <h1 class="h1">Luxury storytelling, built on detail and emotion.</h1>
-      <p class="p lg">
-        The Timeless Pictures is a cinematic studio creating elegant frames and films — crafted with calm energy, premium process, and timeless finishing.
-      </p>
-
-      <div class="hr"></div>
-
-      <div class="grid-2">
-        <div class="card">
-          <p class="kicker">Our philosophy</p>
-          <h2 class="h2">Timeless is not a filter. It’s a feeling.</h2>
-          <p class="p">
-            We focus on light, composition and emotion — delivering visuals that feel expensive, clean and cinematic.
-            Every event is approached like a film: planned, shot and edited with intention.
-          </p>
-          <div class="meta"><span>Cinematic</span><span>Luxury</span><span>Story-first</span></div>
+<body class="bg-white font-sans text-ink antialiased">
+  <header class="motion-nav sticky top-0 z-50 border-b border-slate-800 bg-night shadow-[0_12px_40px_rgba(15,23,42,0.28)]">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <a href="index.html" class="motion-button flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-sm font-semibold text-white ring-1 ring-white/10">TP</div>
+        <div>
+          <p class="text-sm font-semibold tracking-tight text-white">The Timeless Pictures</p>
+          <p class="hidden text-xs text-slate-300 sm:block">Modern cinematic storytelling</p>
         </div>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm font-medium text-slate-300 lg:flex">
+        <a class="transition hover:text-white" href="index.html">Home</a>
+        <a class="text-white" href="about.html">About</a>
+        <a class="transition hover:text-white" href="services.html">Services</a>
+        <a class="transition hover:text-white" href="portfolio.html">Portfolio</a>
+        <a class="transition hover:text-white" href="pricing.html">Packages</a>
+        <a class="transition hover:text-white" href="contact.html">Contact</a>
+      </nav>
+      <a class="motion-button inline-flex rounded-full bg-brand px-5 py-2.5 text-sm font-medium text-white transition hover:scale-[1.02] hover:opacity-95" href="https://wa.me/919097766286?text=Hi%20The%20Timeless%20Pictures%2C%20I%27d%20like%20to%20know%20more%20about%20your%20process." target="_blank" rel="noopener">Start on WhatsApp</a>
+    </div>
+  </header>
 
-        <div class="card">
-          <p class="kicker">What you can expect</p>
-          <h2 class="h2">Professional process from start to finish.</h2>
-          <p class="p">
-            Timeline support, clear communication, premium coverage, and consistent delivery.
-            We keep the vibe comfortable — so the moments stay real, and the frames stay iconic.
-          </p>
-          <div class="btns">
-            <a class="btn primary" href="services.html">View Services</a>
-            <a class="btn js-wa" data-msg="Hi The Timeless Pictures, I’d like to know more about your process & packages." href="#">WhatsApp</a>
+  <main>
+    <section class="bg-gradient-to-b from-white to-paper/70">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1fr_0.9fr] lg:px-10 lg:py-24">
+        <div>
+          <p data-load class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">About</p>
+          <h1 data-load class="mt-4 max-w-4xl text-5xl font-extrabold tracking-[-0.06em] text-ink sm:text-6xl lg:text-7xl">A calm studio process behind every polished frame.</h1>
+          <p data-load class="mt-8 max-w-2xl text-lg font-medium leading-8 text-muted">The Timeless Pictures builds wedding imagery and films that feel modern, refined, and emotionally clear. The goal is simple: make the experience easy, and make the output feel lasting.</p>
+        </div>
+        <div data-load data-parallax="16" class="motion-card rounded-[36px] bg-white p-4 shadow-soft ring-1 ring-slate-200">
+          <img src="assets/img/wedding_3.jpg" alt="Wedding storytelling by The Timeless Pictures" class="h-[460px] w-full rounded-[28px] object-cover sm:h-[560px]" />
+        </div>
+      </div>
+    </section>
+
+    <section data-reveal="scale" class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Philosophy</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-ink sm:text-4xl">Timeless is not a filter. It is discipline in how the moment is seen.</h2>
+          <p class="mt-5 text-base leading-8 text-muted">Light, composition, gesture, pacing, and restraint matter more than visual noise. That is what gives the work a premium feel without making it look forced.</p>
+        </article>
+        <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Client experience</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-ink sm:text-4xl">Professional, clear, and calm from booking to delivery.</h2>
+          <p class="mt-5 text-base leading-8 text-muted">We guide people gently, keep timelines clean, and communicate simply. That helps the day feel lighter and the imagery feel more honest.</p>
+        </article>
+      </div>
+    </section>
+
+    <section data-reveal="scale" class="bg-paper/70 py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Strengths</p>
+          <h2 class="mt-4 text-4xl font-bold tracking-[-0.05em] text-ink sm:text-5xl">Luxury visuals built on control, not excess.</h2>
+        </div>
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+            <p class="text-sm font-semibold text-brand">01</p>
+            <h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Controlled lighting</h3>
+            <p class="mt-4 text-base leading-7 text-muted">Clean skin tones, strong highlights, and consistency even in difficult venues.</p>
+          </div>
+          <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+            <p class="text-sm font-semibold text-brand">02</p>
+            <h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Modern finishing</h3>
+            <p class="mt-4 text-base leading-7 text-muted">Refined color and contrast that feels premium without looking overprocessed.</p>
+          </div>
+          <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+            <p class="text-sm font-semibold text-brand">03</p>
+            <h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Story direction</h3>
+            <p class="mt-4 text-base leading-7 text-muted">A balance of editorial portraiture and real candid emotion so the story still breathes.</p>
           </div>
         </div>
       </div>
+    </section>
 
-      <div class="section sm">
-        <div class="card">
-          <p class="kicker">Signature strengths</p>
-          <div class="grid-3" style="margin-top:12px;">
-            <div class="card" style="background:rgba(16,18,24,.42)">
-              <div class="icon">◎</div>
-              <h3>Controlled Lighting</h3>
-              <p>For clean skin tones and premium highlights — even in challenging venues.</p>
-            </div>
-            <div class="card" style="background:rgba(16,18,24,.42)">
-              <div class="icon">▦</div>
-              <h3>Cinematic Grading</h3>
-              <p>Timeless color palette, rich blacks, and luxury tones.</p>
-            </div>
-            <div class="card" style="background:rgba(16,18,24,.42)">
-              <div class="icon">✺</div>
-              <h3>Story Direction</h3>
-              <p>We guide poses gently, capture candid emotion, and craft narrative edits.</p>
-            </div>
-          </div>
+    <section data-reveal="scale" class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+      <div class="motion-card overflow-hidden rounded-[40px] bg-night px-8 py-10 text-white sm:px-10 lg:px-14">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-blue-300">Next step</p>
+        <h2 class="mt-4 max-w-3xl text-4xl font-bold tracking-[-0.05em] sm:text-5xl">Share your date and city. We will recommend the strongest fit for your event.</h2>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a class="motion-button inline-flex items-center justify-center rounded-full bg-brand px-7 py-3.5 text-sm font-medium text-white transition hover:scale-[1.02] hover:opacity-95" href="https://wa.me/919097766286?text=Hi%20The%20Timeless%20Pictures%2C%20my%20event%20date%20is%20____%20in%20(City).%20Please%20share%20the%20best%20package%20options." target="_blank" rel="noopener">Check availability</a>
+          <a class="motion-button inline-flex items-center justify-center rounded-full bg-white/10 px-7 py-3.5 text-sm font-medium text-white transition hover:bg-white/15" href="contact.html">Open contact page</a>
         </div>
       </div>
+    </section>
+  </main>
 
-      <div class="card">
-        <p class="kicker">Let’s create something iconic</p>
-        <h2 class="h2">Share your date + city — we’ll send the best package.</h2>
-        <div class="btns">
-          <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, my event date is ____ in (City). Please share the best package options." href="#">Check Availability</a>
-          <a class="btn" href="contact.html">Contact</a>
-        </div>
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between lg:px-10">
+      <p>© 2026 The Timeless Pictures. All rights reserved.</p>
+      <div class="flex flex-wrap items-center gap-5">
+        <a class="transition hover:text-ink" href="services.html">Services</a>
+        <a class="transition hover:text-ink" href="portfolio.html">Portfolio</a>
+        <a class="transition hover:text-ink" href="contact.html">Contact</a>
+        <a class="transition hover:text-ink" href="https://www.instagram.com/thetimelesspictures" target="_blank" rel="noopener">Instagram</a>
       </div>
     </div>
-  </section>
-</main>
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <div class="logo">
-        <b>The Timeless Pictures</b>
-        <span>Cinematic • Luxury • Storytelling</span>
-      </div>
-      <p class="small" style="margin-top:10px; max-width:70ch;">
-        We create elegant, emotion-rich visuals — luxury weddings, cinematic films, and brand stories crafted with detail and intent.
-      </p>
-      <div class="socials">
-        <a class="pill" href="https://www.instagram.com/thetimelesspictures" target="_blank" rel="noopener">Instagram</a>
-        <a class="pill js-wa" data-msg="Hi The Timeless Pictures, I’d like to enquire about your services." href="#">WhatsApp</a>
-        <a class="pill" href="mailto:hello@thetimelesspictures.com">Email</a>
-      </div>
-      <p class="small" style="margin-top:14px;">© 2026 The Timeless Pictures. All rights reserved.</p>
-    </div>
-    <div>
-      <p class="small"><b style="color:rgba(242,240,234,.9)">Quick Links</b></p>
-      <div class="hr"></div>
-      <p class="small" style="margin:0;">
-        <a href="services.html">Services</a> •
-        <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a> •
-        <a href="contact.html">Contact</a>
-      </p>
-      <p class="small" style="margin-top:12px;">
-        <span style="color:rgba(242,240,234,.72)">Availability & Bookings:</span><br/>
-        Tap WhatsApp and share your date + city.
-      </p>
-    </div>
-  </div>
-</footer>
-
-<a class="whatsapp-float js-wa" data-msg="Hi The Timeless Pictures, I’d like to enquire about your services." href="#" aria-label="WhatsApp">
-  <span class="wa-dot" aria-hidden="true"></span>
-</a>
-
-<script src="assets/js/main.js"></script>
+  </footer>
+  <script src="assets/js/motion.js"></script>
 </body>
 </html>

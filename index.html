@@ -3,235 +3,339 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0c10" />
-  <title>The Timeless Pictures — Cinematic & Luxury Photography / Films</title>
-  <meta name="description" content="Luxury wedding photography, cinematic films, corporate brand stories and premium event coverage." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="theme-color" content="#0F172A" />
+  <title>The Timeless Pictures | Modern Cinematic Storytelling</title>
+  <meta name="description" content="A premium single-page landing website for The Timeless Pictures, focused on wedding photography, films, and refined visual storytelling." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ["Inter", "sans-serif"]
+          },
+          colors: {
+            ink: "#111111",
+            muted: "#6B7280",
+            paper: "#F5F5F5",
+            brand: "#3B82F6",
+            night: "#0F172A"
+          },
+          boxShadow: {
+            soft: "0 20px 60px rgba(15, 23, 42, 0.08)",
+            float: "0 30px 80px rgba(15, 23, 42, 0.12)"
+          },
+          keyframes: {
+            fadeUp: {
+              "0%": { opacity: "0", transform: "translateY(24px) scale(0.985)" },
+              "100%": { opacity: "1", transform: "translateY(0) scale(1)" }
+            },
+            floatSlow: {
+              "0%, 100%": { transform: "translateY(0px)" },
+              "50%": { transform: "translateY(-8px)" }
+            }
+          },
+          animation: {
+            "fade-up": "fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) both",
+            float: "floatSlow 6s ease-in-out infinite"
+          }
+        }
+      }
+    };
+  </script>
 </head>
-<body>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="logo" href="index.html" aria-label="The Timeless Pictures Home">
-      <b>The Timeless Pictures</b>
-      <span>Cinematic • Luxury • Storytelling</span>
-    </a>
-
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I’d like to book a shoot. Please share availability & packages." href="#">WhatsApp</a>
-    </nav>
-
-    <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false">
-      <span>☰</span>
-    </button>
-  </div>
-  <div id="mobile" class="mobile" aria-label="Mobile menu">
-    <div class="container">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a>
-      <a href="contact.html">Contact</a>
-      <a class="js-wa" data-msg="Hi The Timeless Pictures, I’d like to book a shoot. Please share availability & packages." href="#">Enquire on WhatsApp</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <div class="badge"><span style="color:var(--gold); font-weight:600;">●</span> Now booking weddings, luxury events & brand films</div>
-        <h1 class="h1">Crafting timeless stories through <span style="color:var(--gold)">light</span>, <span style="color:var(--gold)">motion</span> & emotion.</h1>
-        <p class="p lg">
-          The Timeless Pictures is a cinematic storytelling studio — luxury wedding photography, films, and premium commercial visuals designed to feel iconic today and forever.
-        </p>
-        <div class="btns">
-          <a class="btn primary" href="portfolio.html">View Portfolio</a>
-          <a class="btn js-wa" data-msg="Hi The Timeless Pictures, I’d like to enquire. Please share packages & availability." href="#">Enquire on WhatsApp</a>
-          <a class="btn" href="services.html">Explore Services</a>
-        </div>
-        <div class="hr"></div>
-        <div class="grid-3">
-          <div class="card">
-            <div class="icon">✦</div>
-            <h3>Luxury Weddings</h3>
-            <p>Editorial frames, candid emotion, and cinematic highlights — delivered with premium detail.</p>
-            <div class="meta"><span>Photo</span><span>Film</span><span>Albums</span></div>
+<body class="bg-white font-sans text-ink antialiased">
+  <div class="min-h-screen bg-gradient-to-b from-white via-white to-paper/60">
+    <header class="motion-nav sticky top-0 z-50 border-b border-slate-800 bg-night shadow-[0_12px_40px_rgba(15,23,42,0.28)]">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+        <a href="#home" class="motion-button flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-sm font-semibold text-white ring-1 ring-white/10">TP</div>
+          <div>
+            <p class="text-sm font-semibold tracking-tight text-white">The Timeless Pictures</p>
+            <p class="hidden text-xs text-slate-300 sm:block">Modern cinematic storytelling</p>
           </div>
-          <div class="card">
-            <div class="icon">▣</div>
-            <h3>Brand & Corporate</h3>
-            <p>Corporate films, brand stories, product visuals and events — built to look expensive and convert.</p>
-            <div class="meta"><span>Ads</span><span>Events</span><span>Story</span></div>
-          </div>
-          <div class="card">
-            <div class="icon">◼</div>
-            <h3>Signature Aesthetic</h3>
-            <p>Controlled lighting, clean compositions, and cinematic grading that stays timeless.</p>
-            <div class="meta"><span>Cinematic</span><span>Luxury</span><span>Clean</span></div>
-          </div>
+        </a>
+
+        <nav class="hidden items-center gap-8 text-sm font-medium text-slate-300 lg:flex">
+          <a class="motion-button rounded-full bg-white/10 px-4 py-2 text-white transition hover:bg-white/15" href="#home">Home</a>
+          <a class="transition hover:text-white" href="#services">Services</a>
+          <a class="transition hover:text-white" href="#portfolio">Portfolio</a>
+          <a class="transition hover:text-white" href="#process">Process</a>
+          <a class="transition hover:text-white" href="#contact">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <a
+            class="motion-button hidden rounded-full bg-white/10 px-5 py-2.5 text-sm font-medium text-white ring-1 ring-white/10 transition hover:bg-white/15 lg:inline-flex"
+            href="https://www.instagram.com/thetimelesspictures"
+            target="_blank"
+            rel="noopener"
+          >
+            Instagram
+          </a>
+          <a
+            class="motion-button inline-flex rounded-full bg-brand px-5 py-2.5 text-sm font-medium text-white shadow-sm transition hover:scale-[1.02] hover:opacity-95"
+            href="https://wa.me/919097766286?text=Hi%20The%20Timeless%20Pictures%2C%20I%27d%20like%20to%20enquire%20about%20availability%20and%20packages."
+            target="_blank"
+            rel="noopener"
+          >
+            Start on WhatsApp
+          </a>
         </div>
       </div>
+    </header>
 
-      <div class="hero-card">
-        <div class="hero-media" aria-label="Cinematic preview">
-          <div class="stamp">Cinematic • Luxury</div>
+    <main id="home">
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-x-0 top-0 h-[520px] bg-[radial-gradient(circle_at_top,rgba(59,130,246,0.12),transparent_46%)]"></div>
+        <div class="mx-auto grid min-h-[calc(100vh-73px)] max-w-7xl items-center gap-16 px-6 py-16 lg:grid-cols-[1.05fr_0.95fr] lg:px-10 lg:py-20">
+          <div class="relative z-10">
+            <h1 data-load class="mt-8 max-w-4xl text-5xl font-extrabold leading-[0.92] tracking-[-0.06em] text-ink sm:text-6xl lg:text-8xl">
+              Stories, crafted with a calm eye and a modern finish.
+            </h1>
+            <p data-load class="mt-8 max-w-2xl text-lg font-medium leading-8 text-muted sm:text-xl">
+              The Timeless Pictures creates wedding imagery, cinematic films, and premium event visuals that feel clean, emotional, and unmistakably refined.
+            </p>
+
+            <div data-load class="mt-10 flex flex-col gap-4 sm:flex-row">
+              <a
+                class="motion-button inline-flex items-center justify-center rounded-full bg-ink px-7 py-3.5 text-sm font-medium text-white transition hover:scale-[1.02] hover:opacity-95"
+                href="#portfolio"
+              >
+                View portfolio
+              </a>
+              <a
+                class="motion-button inline-flex items-center justify-center rounded-full bg-slate-100 px-7 py-3.5 text-sm font-medium text-ink transition hover:scale-[1.02] hover:bg-slate-200"
+                href="#services"
+              >
+                Explore services
+              </a>
+            </div>
+
+            <div data-load class="mt-14 grid max-w-2xl grid-cols-1 gap-5 sm:grid-cols-3">
+              <div data-reveal="scale" class="motion-card rounded-3xl border border-slate-200 bg-white p-5 shadow-soft">
+                <p class="text-3xl font-bold tracking-tight text-ink">200+</p>
+                <p class="mt-2 text-sm leading-6 text-muted">events covered with a detail-first studio process.</p>
+              </div>
+              <div data-reveal="scale" class="motion-card rounded-3xl border border-slate-200 bg-white p-5 shadow-soft">
+                <p class="text-3xl font-bold tracking-tight text-ink">5★</p>
+                <p class="mt-2 text-sm leading-6 text-muted">client-rated experience across weddings and events.</p>
+              </div>
+              <div data-reveal="scale" class="motion-card rounded-3xl border border-slate-200 bg-white p-5 shadow-soft">
+                <p class="text-3xl font-bold tracking-tight text-ink">4K</p>
+                <p class="mt-2 text-sm leading-6 text-muted">cinematic delivery for film-first storytelling.</p>
+              </div>
+            </div>
+          </div>
+
+          <div data-load class="relative flex items-center justify-center">
+            <div class="absolute inset-0 -z-10 bg-[radial-gradient(circle,rgba(59,130,246,0.10),transparent_58%)] blur-3xl"></div>
+            <div data-parallax="22" class="relative w-full max-w-[620px]">
+              <div class="motion-card rounded-[40px] bg-white p-4 shadow-float ring-1 ring-slate-200">
+                <img
+                  src="assets/img/wedding_1.jpg"
+                  alt="The Timeless Pictures featured wedding portrait"
+                  class="h-[520px] w-full rounded-[32px] object-cover sm:h-[620px]"
+                />
+              </div>
+
+              <div data-parallax="14" class="motion-card absolute -left-6 top-10 hidden w-40 rounded-[28px] bg-white p-3 shadow-soft ring-1 ring-slate-200 sm:block">
+                <img
+                  src="assets/img/wedding_4.jpg"
+                  alt="Bride portrait"
+                  class="h-48 w-full rounded-[22px] object-cover"
+                />
+              </div>
+
+              <div data-parallax="10" class="motion-card absolute -right-6 bottom-10 hidden w-44 rounded-[28px] bg-white p-3 shadow-soft ring-1 ring-slate-200 sm:block">
+                <img
+                  src="assets/img/wedding_6.jpg"
+                  alt="Portrait detail"
+                  class="h-52 w-full rounded-[22px] object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="section sm">
-    <div class="container">
-      <div class="grid-2">
-        <div class="card">
-          <p class="kicker">Why clients choose us</p>
-          <h2 class="h2">Premium process. Calm energy. Exceptional output.</h2>
-          <p class="p">
-            From timeline planning to final delivery, we keep everything smooth, professional and detail-first —
-            so you can enjoy the moment while we capture it perfectly.
+      <section id="services" data-reveal="scale" class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Services</p>
+          <h2 class="mt-4 text-4xl font-bold tracking-[-0.05em] text-ink sm:text-5xl">
+            Minimal process. Premium output. Clear creative direction.
+          </h2>
+          <p class="mt-6 text-lg leading-8 text-muted">
+            The studio keeps the experience calm and the visuals sharp, whether the brief is a wedding, a luxury celebration, or a polished brand story.
           </p>
         </div>
-        <div class="card">
-          <p class="kicker">Fast enquiry</p>
-          <h2 class="h2">Share your date + city — we’ll send the best fit.</h2>
-          <p class="p muted">Get packages, availability, and a quick call scheduled in minutes.</p>
-          <div class="btns">
-            <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, my event date is ____ in (City). Please share availability & packages." href="#">Check Availability</a>
-            <a class="btn" href="contact.html">Contact Form</a>
+
+        <div class="mt-14 grid gap-6 lg:grid-cols-3">
+          <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+            <p class="text-sm font-semibold text-brand">01</p>
+            <h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Wedding photography</h3>
+            <p class="mt-4 text-base leading-7 text-muted">
+              Editorial portraits, candid emotion, polished galleries, and timeless image-making across the full celebration.
+            </p>
+          </article>
+          <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+            <p class="text-sm font-semibold text-brand">02</p>
+            <h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Cinematic films</h3>
+            <p class="mt-4 text-base leading-7 text-muted">
+              Teasers, highlight films, and complete edits with restrained grading, clean rhythm, and story-led pacing.
+            </p>
+          </article>
+          <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+            <p class="text-sm font-semibold text-brand">03</p>
+            <h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Luxury events &amp; brands</h3>
+            <p class="mt-4 text-base leading-7 text-muted">
+              Premium event coverage, founder stories, and commercial visuals designed to feel elevated from the first impression.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section id="portfolio" data-reveal="scale" class="bg-paper/70 py-24">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <div class="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+            <div class="max-w-3xl">
+              <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Portfolio</p>
+              <h2 class="mt-4 text-4xl font-bold tracking-[-0.05em] text-ink sm:text-5xl">
+                A clean visual language, grounded in real moments.
+              </h2>
+            </div>
+            <a
+              class="motion-button inline-flex w-fit rounded-full bg-brand px-6 py-3 text-sm font-medium text-white transition hover:scale-[1.02] hover:opacity-95"
+              href="https://wa.me/919097766286?text=Hi%20The%20Timeless%20Pictures%2C%20I%20saw%20the%20portfolio%20and%20want%20to%20discuss%20my%20event."
+              target="_blank"
+              rel="noopener"
+            >
+              Discuss your event
+            </a>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-[1.15fr_0.85fr]">
+            <div data-reveal="scale" class="motion-card rounded-[36px] bg-white p-4 shadow-soft ring-1 ring-slate-200">
+              <img src="assets/img/wedding_2.jpg" alt="Couple portrait by The Timeless Pictures" class="h-[460px] w-full rounded-[28px] object-cover sm:h-[560px]" />
+            </div>
+            <div class="grid gap-6">
+              <div data-reveal="scale" class="motion-card rounded-[32px] bg-white p-4 shadow-soft ring-1 ring-slate-200">
+                <img src="assets/img/wedding_3.jpg" alt="Wedding storytelling frame" class="h-60 w-full rounded-[24px] object-cover" />
+              </div>
+              <div data-reveal="scale" class="motion-card rounded-[32px] bg-white p-4 shadow-soft ring-1 ring-slate-200">
+                <img src="assets/img/wedding_5.jpg" alt="Ceremony detail frame" class="h-60 w-full rounded-[24px] object-cover" />
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="section">
-    <div class="container">
-      <p class="kicker">Featured work</p>
-      <h2 class="h2">A glimpse of our cinematic frames</h2>
-      <p class="p muted">Replace these placeholders with your best wedding & corporate highlights.</p>
-
-      <div class="portfolio-tabs">
-        <button class="tab active" data-cat="all" type="button">All</button>
-        <button class="tab" data-cat="weddings" type="button">Weddings</button>
-        <button class="tab" data-cat="corporate" type="button">Corporate</button>
-        <button class="tab" data-cat="events" type="button">Luxury Events</button>
-        <button class="tab" data-cat="films" type="button">Films</button>
-      </div>
-
-      <div class="gallery">
-        <div class="tile wide" data-cat="weddings" data-title="Wedding • Signature Portraits">
-          <div class="cap"><b>Wedding • Signature Portraits</b><span>Editorial + candid frames</span></div>
-        </div>
-        <div class="tile tall" data-cat="corporate" data-title="Corporate • Brand Story">
-          <div class="cap"><b>Corporate • Brand Story</b><span>Premium commercial look</span></div>
-        </div>
-        <div class="tile" data-cat="events" data-title="Luxury Event • Highlights">
-          <div class="cap"><b>Luxury Event • Highlights</b><span>Elegant coverage</span></div>
-        </div>
-        <div class="tile" data-cat="films" data-title="Cinematic Film • Teaser">
-          <div class="cap"><b>Cinematic Film • Teaser</b><span>Motion + music</span></div>
-        </div>
-        <div class="tile" data-cat="weddings" data-title="Wedding • Candid Moments">
-          <div class="cap"><b>Wedding • Candid Moments</b><span>Emotion-driven storytelling</span></div>
-        </div>
-        <div class="tile wide" data-cat="corporate" data-title="Corporate • Event Coverage">
-          <div class="cap"><b>Corporate • Event Coverage</b><span>Clean & professional</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section sm">
-    <div class="container">
-      <div class="card">
-        <p class="kicker">Testimonials</p>
-        <h2 class="h2">Luxury clients love the calm, the craft, and the delivery.</h2>
-        <div class="grid-3" style="margin-top:14px;">
-          <div class="card" style="background:rgba(16,18,24,.42)">
-            <p class="p">“The frames look like a movie. Super professional team and the delivery was premium.”</p>
-            <div class="meta"><span>Wedding Client</span><span>5★</span></div>
+      <section id="process" data-reveal="scale" class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+        <div class="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+          <div>
+            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Process</p>
+            <h2 class="mt-4 text-4xl font-bold tracking-[-0.05em] text-ink sm:text-5xl">
+              Built to feel effortless from enquiry to final delivery.
+            </h2>
           </div>
-          <div class="card" style="background:rgba(16,18,24,.42)">
-            <p class="p">“Corporate film quality is top notch. Our brand finally looks high-end.”</p>
-            <div class="meta"><span>Brand Client</span><span>5★</span></div>
-          </div>
-          <div class="card" style="background:rgba(16,18,24,.42)">
-            <p class="p">“On-time, polite, and creative. The cinematic teaser gave us goosebumps.”</p>
-            <div class="meta"><span>Luxury Event</span><span>5★</span></div>
+
+          <div class="grid gap-4">
+            <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-7 shadow-soft ring-1 ring-slate-200">
+              <p class="text-sm font-semibold text-brand">01</p>
+              <h3 class="mt-3 text-xl font-bold tracking-tight text-ink">Share your date and city</h3>
+              <p class="mt-3 text-base leading-7 text-muted">We respond with availability, package direction, and the right fit for your event type.</p>
+            </div>
+            <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-7 shadow-soft ring-1 ring-slate-200">
+              <p class="text-sm font-semibold text-brand">02</p>
+              <h3 class="mt-3 text-xl font-bold tracking-tight text-ink">Align on coverage and story</h3>
+              <p class="mt-3 text-base leading-7 text-muted">The team, visual approach, and deliverables are shaped around how the final work needs to feel.</p>
+            </div>
+            <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-7 shadow-soft ring-1 ring-slate-200">
+              <p class="text-sm font-semibold text-brand">03</p>
+              <h3 class="mt-3 text-xl font-bold tracking-tight text-ink">Receive a polished final narrative</h3>
+              <p class="mt-3 text-base leading-7 text-muted">From fast previews to cinematic edits, everything is delivered with a consistent premium finish.</p>
+            </div>
           </div>
         </div>
-        <div class="btns">
-          <a class="btn primary" href="portfolio.html">See More Work</a>
-          <a class="btn js-wa" data-msg="Hi The Timeless Pictures, I saw your website. Please share packages & availability." href="#">Enquire Now</a>
+      </section>
+
+      <section data-reveal="scale" class="bg-night py-24 text-white">
+        <div class="mx-auto max-w-7xl px-6 lg:px-10">
+          <div class="max-w-3xl">
+            <p class="text-sm font-semibold uppercase tracking-[0.22em] text-blue-300">Why it works</p>
+            <h2 class="mt-4 text-4xl font-bold tracking-[-0.05em] sm:text-5xl">
+              Premium visuals without noise, clutter, or over-styling.
+            </h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-3">
+            <div data-reveal="scale" class="motion-card rounded-[30px] border border-white/10 bg-white/5 p-8">
+              <p class="text-lg font-semibold tracking-tight">Calm direction</p>
+              <p class="mt-4 text-sm leading-7 text-slate-300">People feel guided, not forced. That keeps the imagery honest and elevated.</p>
+            </div>
+            <div data-reveal="scale" class="motion-card rounded-[30px] border border-white/10 bg-white/5 p-8">
+              <p class="text-lg font-semibold tracking-tight">Modern finishing</p>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Clean contrast, refined color, and cinematic restraint create a more premium result.</p>
+            </div>
+            <div data-reveal="scale" class="motion-card rounded-[30px] border border-white/10 bg-white/5 p-8">
+              <p class="text-lg font-semibold tracking-tight">Client-first flow</p>
+              <p class="mt-4 text-sm leading-7 text-slate-300">Fast communication, clear deliverables, and simple booking keep the process frictionless.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" data-reveal="scale" class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+        <div class="motion-card overflow-hidden rounded-[40px] bg-white shadow-soft ring-1 ring-slate-200">
+          <div class="grid gap-10 p-8 sm:p-10 lg:grid-cols-[1fr_0.9fr] lg:p-14">
+            <div>
+              <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Contact</p>
+              <h2 class="mt-4 max-w-2xl text-4xl font-bold tracking-[-0.05em] text-ink sm:text-5xl">
+                Tell us the date, the city, and what you want the story to feel like.
+              </h2>
+              <p class="mt-6 max-w-2xl text-lg leading-8 text-muted">
+                Weddings, cinematic films, luxury events, and brand visuals are all handled through a simple WhatsApp-first booking flow.
+              </p>
+            </div>
+
+            <div class="flex flex-col justify-center gap-4">
+              <a
+                class="motion-button inline-flex items-center justify-center rounded-full bg-brand px-7 py-4 text-sm font-medium text-white transition hover:scale-[1.02] hover:opacity-95"
+                href="https://wa.me/919097766286?text=Hi%20The%20Timeless%20Pictures%2C%20my%20event%20date%20is%20____%20in%20(City).%20Please%20share%20packages%20and%20availability."
+                target="_blank"
+                rel="noopener"
+              >
+                Check availability
+              </a>
+              <a
+                class="motion-button inline-flex items-center justify-center rounded-full bg-slate-100 px-7 py-4 text-sm font-medium text-ink transition hover:scale-[1.02] hover:bg-slate-200"
+                href="mailto:hello@thetimelesspictures.com"
+              >
+                hello@thetimelesspictures.com
+              </a>
+              <p class="text-sm leading-7 text-muted">India • Available for travel • Fastest response on WhatsApp</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white">
+      <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between lg:px-10">
+        <p>© 2026 The Timeless Pictures. All rights reserved.</p>
+        <div class="flex flex-wrap items-center gap-5">
+          <a class="transition hover:text-ink" href="#services">Services</a>
+          <a class="transition hover:text-ink" href="#portfolio">Portfolio</a>
+          <a class="transition hover:text-ink" href="#contact">Contact</a>
+          <a class="transition hover:text-ink" href="https://www.instagram.com/thetimelesspictures" target="_blank" rel="noopener">Instagram</a>
         </div>
       </div>
-    </div>
-  </section>
-</main>
-
-<div id="modal" class="modal" aria-hidden="true" role="dialog" aria-label="Preview modal">
-  <div class="modal-card">
-    <div class="modal-top">
-      <b id="modalTitle">Preview</b>
-      <button id="modalClose" class="close" aria-label="Close">✕</button>
-    </div>
-    <div class="modal-media">
-      <div class="ph" aria-label="Placeholder image — replace with your images"></div>
-      <p class="help" style="margin-top:10px;">Tip: Replace placeholders with your best shots to instantly upgrade the premium feel.</p>
-    </div>
+    </footer>
   </div>
-</div>
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <div class="logo">
-        <b>The Timeless Pictures</b>
-        <span>Cinematic • Luxury • Storytelling</span>
-      </div>
-      <p class="small" style="margin-top:10px; max-width:70ch;">
-        We create elegant, emotion-rich visuals — luxury weddings, cinematic films, and brand stories crafted with detail and intent.
-      </p>
-      <div class="socials">
-        <a class="pill" href="https://www.instagram.com/thetimelesspictures" target="_blank" rel="noopener">Instagram</a>
-        <a class="pill js-wa" data-msg="Hi The Timeless Pictures, I’d like to enquire about your services." href="#">WhatsApp</a>
-        <a class="pill" href="mailto:hello@thetimelesspictures.com">Email</a>
-      </div>
-      <p class="small" style="margin-top:14px;">© 2026 The Timeless Pictures. All rights reserved.</p>
-    </div>
-    <div>
-      <p class="small"><b style="color:rgba(242,240,234,.9)">Quick Links</b></p>
-      <div class="hr"></div>
-      <p class="small" style="margin:0;">
-        <a href="services.html">Services</a> •
-        <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a> •
-        <a href="contact.html">Contact</a>
-      </p>
-      <p class="small" style="margin-top:12px;">
-        <span style="color:rgba(242,240,234,.72)">Availability & Bookings:</span><br/>
-        Tap WhatsApp and share your date + city.
-      </p>
-    </div>
-  </div>
-</footer>
-
-<a class="whatsapp-float js-wa" data-msg="Hi The Timeless Pictures, I’d like to enquire about your services." href="#" aria-label="WhatsApp">
-  <span class="wa-dot" aria-hidden="true"></span>
-</a>
-
-<script src="assets/js/main.js"></script>
+  <script src="assets/js/motion.js"></script>
 </body>
 </html>

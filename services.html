@@ -3,168 +3,126 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#0b0c10" />
-  <title>Services — The Timeless Pictures</title>
-  <meta name="description" content="Services: luxury wedding photography, cinematic films, corporate brand stories and premium event coverage." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/styles.css" />
+  <meta name="theme-color" content="#0F172A" />
+  <title>Services | The Timeless Pictures</title>
+  <meta name="description" content="Wedding photography, cinematic films, luxury events, and premium brand visuals by The Timeless Pictures." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/motion.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = { theme: { extend: { fontFamily: { sans: ["Inter", "sans-serif"] }, colors: { ink: "#111111", muted: "#6B7280", paper: "#F5F5F5", brand: "#3B82F6", night: "#0F172A" }, boxShadow: { soft: "0 20px 60px rgba(15, 23, 42, 0.08)" } } } };
+  </script>
 </head>
-<body>
-
-<header class="nav">
-  <div class="container nav-inner">
-    <a class="logo" href="index.html" aria-label="The Timeless Pictures Home">
-      <b>The Timeless Pictures</b>
-      <span>Cinematic • Luxury • Storytelling</span>
-    </a>
-
-    <nav class="nav-links" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a>
-      <a href="contact.html">Contact</a>
-      <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I’d like to book a shoot. Please share availability & packages." href="#">WhatsApp</a>
-    </nav>
-
-    <button id="burger" class="burger" aria-label="Open menu" aria-expanded="false">
-      <span>☰</span>
-    </button>
-  </div>
-  <div id="mobile" class="mobile" aria-label="Mobile menu">
-    <div class="container">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a>
-      <a href="contact.html">Contact</a>
-      <a class="js-wa" data-msg="Hi The Timeless Pictures, I’d like to book a shoot. Please share availability & packages." href="#">Enquire on WhatsApp</a>
+<body class="bg-white font-sans text-ink antialiased">
+  <header class="motion-nav sticky top-0 z-50 border-b border-slate-800 bg-night shadow-[0_12px_40px_rgba(15,23,42,0.28)]">
+    <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-10">
+      <a href="index.html" class="motion-button flex items-center gap-3">
+        <div class="flex h-10 w-10 items-center justify-center rounded-2xl bg-white/12 text-sm font-semibold text-white ring-1 ring-white/10">TP</div>
+        <div>
+          <p class="text-sm font-semibold tracking-tight text-white">The Timeless Pictures</p>
+          <p class="hidden text-xs text-slate-300 sm:block">Modern cinematic storytelling</p>
+        </div>
+      </a>
+      <nav class="hidden items-center gap-8 text-sm font-medium text-slate-300 lg:flex">
+        <a class="transition hover:text-white" href="index.html">Home</a>
+        <a class="transition hover:text-white" href="about.html">About</a>
+        <a class="text-white" href="services.html">Services</a>
+        <a class="transition hover:text-white" href="portfolio.html">Portfolio</a>
+        <a class="transition hover:text-white" href="pricing.html">Packages</a>
+        <a class="transition hover:text-white" href="contact.html">Contact</a>
+      </nav>
+      <a class="motion-button inline-flex rounded-full bg-brand px-5 py-2.5 text-sm font-medium text-white transition hover:scale-[1.02] hover:opacity-95" href="https://wa.me/919097766286?text=Hi%20The%20Timeless%20Pictures%2C%20I%27d%20like%20to%20enquire%20about%20your%20services." target="_blank" rel="noopener">Start on WhatsApp</a>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
-  <section class="section">
-    <div class="container">
-      <p class="kicker">Services</p>
-      <h1 class="h1">Cinematic coverage with luxury finishing.</h1>
-      <p class="p lg">Choose a service — we’ll tailor the team, timeline and deliverables to match your event and vibe.</p>
-
-      <div class="hr"></div>
-
-      <div class="grid-2">
-        <div class="card">
-          <p class="kicker">Weddings</p>
-          <h2 class="h2">Wedding Photography</h2>
-          <p class="p">Editorial portraits + real candid moments, crafted with premium detail.</p>
-          <div class="meta"><span>Full-day coverage</span><span>Albums</span><span>Fast previews</span></div>
-          <div class="btns">
-            <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I want wedding photography. Please share packages & availability." href="#">Get Packages</a>
-            <a class="btn" href="portfolio.html">See Wedding Work</a>
-          </div>
+  <main>
+    <section class="bg-gradient-to-b from-white to-paper/70">
+      <div class="mx-auto grid max-w-7xl gap-12 px-6 py-20 lg:grid-cols-[1fr_0.9fr] lg:px-10 lg:py-24">
+        <div>
+          <p data-load class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Services</p>
+          <h1 data-load class="mt-4 max-w-4xl text-5xl font-extrabold tracking-[-0.06em] text-ink sm:text-6xl lg:text-7xl">Coverage designed to feel sharp, premium, and emotionally clear.</h1>
+          <p data-load class="mt-8 max-w-2xl text-lg font-medium leading-8 text-muted">Each service is tailored to the event, but the standard stays the same: modern image-making, calm direction, and clean delivery.</p>
         </div>
-
-        <div class="card">
-          <p class="kicker">Weddings</p>
-          <h2 class="h2">Cinematic Wedding Films</h2>
-          <p class="p">Teasers, highlights, and full films with story direction and cinematic sound design.</p>
-          <div class="meta"><span>Teaser</span><span>Highlight</span><span>Full Film</span></div>
-          <div class="btns">
-            <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I want a cinematic wedding film. Please share deliverables & pricing." href="#">Enquire</a>
-            <a class="btn" href="portfolio.html">See Films</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <p class="kicker">Corporate</p>
-          <h2 class="h2">Corporate Films & Brand Stories</h2>
-          <p class="p">Premium visuals that elevate your brand — product, ads, events and founder stories.</p>
-          <div class="meta"><span>Brand film</span><span>Ads</span><span>Events</span></div>
-          <div class="btns">
-            <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I need a corporate/brand film. Please share your process & quote." href="#">Get Quote</a>
-            <a class="btn" href="contact.html">Book a Call</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <p class="kicker">Events</p>
-          <h2 class="h2">Luxury Event Coverage</h2>
-          <p class="p">High-end events captured with clean compositions, premium lighting and fast delivery.</p>
-          <div class="meta"><span>Photo</span><span>Film</span><span>Same-day selects</span></div>
-          <div class="btns">
-            <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I want luxury event coverage. Please share packages & availability." href="#">Enquire</a>
-            <a class="btn" href="portfolio.html">See Work</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <p class="kicker">Lifestyle</p>
-          <h2 class="h2">Fashion / Lifestyle Shoots</h2>
-          <p class="p">Concept planning, location scouting and premium retouching for luxury aesthetics.</p>
-          <div class="meta"><span>Concept</span><span>Studio</span><span>Retouch</span></div>
-          <div class="btns">
-            <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I want a fashion/lifestyle shoot. Please share shoot options." href="#">Enquire</a>
-            <a class="btn" href="contact.html">Contact</a>
-          </div>
-        </div>
-
-        <div class="card">
-          <p class="kicker">Custom</p>
-          <h2 class="h2">Made-to-fit Packages</h2>
-          <p class="p">Tell us your event type, date and city — we’ll recommend the best team & deliverables.</p>
-          <div class="meta"><span>Flexible</span><span>Premium</span><span>Fast response</span></div>
-          <div class="btns">
-            <a class="btn primary js-wa" data-msg="Hi The Timeless Pictures, I need a custom package for ____ on (date) in (city). Please advise." href="#">Get Recommendation</a>
-            <a class="btn" href="portfolio.html">View Portfolio</a>
-          </div>
+        <div data-load data-parallax="16" class="motion-card rounded-[36px] bg-white p-4 shadow-soft ring-1 ring-slate-200">
+          <img src="assets/img/wedding_5.jpg" alt="The Timeless Pictures event frame" class="h-[460px] w-full rounded-[28px] object-cover sm:h-[560px]" />
         </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
 
-<footer class="footer">
-  <div class="container footer-grid">
-    <div>
-      <div class="logo">
-        <b>The Timeless Pictures</b>
-        <span>Cinematic • Luxury • Storytelling</span>
+    <section data-reveal="scale" class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+      <div class="grid gap-6 lg:grid-cols-2">
+        <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+          <p class="text-sm font-semibold text-brand">01</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-ink">Wedding photography</h2>
+          <p class="mt-5 text-base leading-8 text-muted">Editorial portraits, real candid moments, polished galleries, and full-day wedding storytelling.</p>
+        </article>
+        <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+          <p class="text-sm font-semibold text-brand">02</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-ink">Cinematic wedding films</h2>
+          <p class="mt-5 text-base leading-8 text-muted">Teasers, highlight films, and complete edits with cinematic pacing and restrained modern grading.</p>
+        </article>
+        <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+          <p class="text-sm font-semibold text-brand">03</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-ink">Luxury event coverage</h2>
+          <p class="mt-5 text-base leading-8 text-muted">High-end events captured with clean compositions, premium lighting, and fast selects when needed.</p>
+        </article>
+        <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+          <p class="text-sm font-semibold text-brand">04</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-ink">Brand and corporate visuals</h2>
+          <p class="mt-5 text-base leading-8 text-muted">Founder films, campaigns, launches, and polished visual stories built to elevate perception.</p>
+        </article>
+        <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+          <p class="text-sm font-semibold text-brand">05</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-ink">Fashion and lifestyle shoots</h2>
+          <p class="mt-5 text-base leading-8 text-muted">Concept-led portraits and brand-led imagery with a refined, modern finish.</p>
+        </article>
+        <article data-reveal="scale" class="motion-card rounded-[32px] bg-white p-8 shadow-soft ring-1 ring-slate-200">
+          <p class="text-sm font-semibold text-brand">06</p>
+          <h2 class="mt-4 text-3xl font-bold tracking-[-0.04em] text-ink">Custom packages</h2>
+          <p class="mt-5 text-base leading-8 text-muted">Built around your event type, location, team needs, and the exact final deliverables you want.</p>
+        </article>
       </div>
-      <p class="small" style="margin-top:10px; max-width:70ch;">
-        We create elegant, emotion-rich visuals — luxury weddings, cinematic films, and brand stories crafted with detail and intent.
-      </p>
-      <div class="socials">
-        <a class="pill" href="https://www.instagram.com/thetimelesspictures" target="_blank" rel="noopener">Instagram</a>
-        <a class="pill js-wa" data-msg="Hi The Timeless Pictures, I’d like to enquire about your services." href="#">WhatsApp</a>
-        <a class="pill" href="mailto:hello@thetimelesspictures.com">Email</a>
+    </section>
+
+    <section data-reveal="scale" class="bg-paper/70 py-24">
+      <div class="mx-auto max-w-7xl px-6 lg:px-10">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-[0.22em] text-brand">Approach</p>
+          <h2 class="mt-4 text-4xl font-bold tracking-[-0.05em] text-ink sm:text-5xl">The workflow stays simple, even when the production is not.</h2>
+        </div>
+        <div class="mt-12 grid gap-6 lg:grid-cols-3">
+          <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-8 shadow-soft ring-1 ring-slate-200"><p class="text-sm font-semibold text-brand">Step 01</p><h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Brief clearly</h3><p class="mt-4 text-base leading-7 text-muted">Share the date, city, scope, and how you want the work to feel.</p></div>
+          <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-8 shadow-soft ring-1 ring-slate-200"><p class="text-sm font-semibold text-brand">Step 02</p><h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Plan precisely</h3><p class="mt-4 text-base leading-7 text-muted">We align coverage, deliverables, and visual direction before the shoot begins.</p></div>
+          <div data-reveal="scale" class="motion-card rounded-[30px] bg-white p-8 shadow-soft ring-1 ring-slate-200"><p class="text-sm font-semibold text-brand">Step 03</p><h3 class="mt-4 text-2xl font-bold tracking-tight text-ink">Deliver cleanly</h3><p class="mt-4 text-base leading-7 text-muted">Fast previews, polished edits, and premium final output with less friction.</p></div>
+        </div>
       </div>
-      <p class="small" style="margin-top:14px;">© 2026 The Timeless Pictures. All rights reserved.</p>
-    </div>
-    <div>
-      <p class="small"><b style="color:rgba(242,240,234,.9)">Quick Links</b></p>
-      <div class="hr"></div>
-      <p class="small" style="margin:0;">
-        <a href="services.html">Services</a> •
-        <a href="portfolio.html">Portfolio</a>
-      <a href="pricing.html">Packages</a> •
-        <a href="contact.html">Contact</a>
-      </p>
-      <p class="small" style="margin-top:12px;">
-        <span style="color:rgba(242,240,234,.72)">Availability & Bookings:</span><br/>
-        Tap WhatsApp and share your date + city.
-      </p>
-    </div>
-  </div>
-</footer>
+    </section>
 
-<a class="whatsapp-float js-wa" data-msg="Hi The Timeless Pictures, I’d like to enquire about your services." href="#" aria-label="WhatsApp">
-  <span class="wa-dot" aria-hidden="true"></span>
-</a>
+    <section data-reveal="scale" class="mx-auto max-w-7xl px-6 py-24 lg:px-10">
+      <div class="motion-card overflow-hidden rounded-[40px] bg-night px-8 py-10 text-white sm:px-10 lg:px-14">
+        <p class="text-sm font-semibold uppercase tracking-[0.22em] text-blue-300">Enquire</p>
+        <h2 class="mt-4 max-w-3xl text-4xl font-bold tracking-[-0.05em] sm:text-5xl">Tell us what you need and we will shape the right coverage around it.</h2>
+        <div class="mt-8 flex flex-col gap-4 sm:flex-row">
+          <a class="motion-button inline-flex items-center justify-center rounded-full bg-brand px-7 py-3.5 text-sm font-medium text-white transition hover:scale-[1.02] hover:opacity-95" href="https://wa.me/919097766286?text=Hi%20The%20Timeless%20Pictures%2C%20I%20want%20to%20discuss%20the%20right%20service%20for%20my%20event." target="_blank" rel="noopener">Get recommendation</a>
+          <a class="motion-button inline-flex items-center justify-center rounded-full bg-white/10 px-7 py-3.5 text-sm font-medium text-white transition hover:bg-white/15" href="portfolio.html">See portfolio</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
-<script src="assets/js/main.js"></script>
+  <footer class="border-t border-slate-200 bg-white">
+    <div class="mx-auto flex max-w-7xl flex-col gap-4 px-6 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between lg:px-10">
+      <p>© 2026 The Timeless Pictures. All rights reserved.</p>
+      <div class="flex flex-wrap items-center gap-5">
+        <a class="transition hover:text-ink" href="about.html">About</a>
+        <a class="transition hover:text-ink" href="portfolio.html">Portfolio</a>
+        <a class="transition hover:text-ink" href="contact.html">Contact</a>
+        <a class="transition hover:text-ink" href="https://www.instagram.com/thetimelesspictures" target="_blank" rel="noopener">Instagram</a>
+      </div>
+    </div>
+  </footer>
+  <script src="assets/js/motion.js"></script>
 </body>
 </html>

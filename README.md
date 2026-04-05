@@ -1,39 +1,33 @@
-# The Timeless Pictures — Multi-page Website (Static)
+# The Timeless Pictures
 
-## ✅ What’s included
-- Multi-page site: Home, About, Services, Portfolio, Contact
-- Cinematic & luxury theme (dark + warm gold accents)
-- WhatsApp floating lead button on every page
-- Portfolio category filters + preview modal (placeholders)
-- Contact form that opens WhatsApp with full enquiry text (static hosting friendly)
+Editorial-luxury multi-page website for a photography and films studio.
 
-## 🔧 Setup (Local)
-Just open `index.html` in your browser.
+## Current build
+- Multi-page static website: Home, About, Services, Portfolio, Packages, Contact
+- Real image-led layout using the wedding assets in `assets/img/`
+- WhatsApp-first enquiry flow across the full site
+- Portfolio filtering and image lightbox preview
+- Contact form that opens WhatsApp with structured enquiry details
+- Responsive layout with motion, reveal transitions, and a unified design system
 
-## 🟢 Add your WhatsApp number
-Edit:
-`assets/js/main.js`
+## Local use
+Open `index.html` directly in a browser.
 
-Find:
+## WhatsApp number
+Edit `assets/js/main.js` and update:
+
 `const WHATSAPP_NUMBER = "919097766286";`
 
-Replace with:
-`"919097766286"` (no +, no spaces)
+Use digits only, without `+` or spaces.
 
-Example:
-`"919876543210"`
+## Content updates
+- Replace or add new images inside `assets/img/`
+- Update page copy directly in the HTML files
+- Extend the portfolio grid in `portfolio.html` as more categories or projects are available
 
-## 🖼️ Replace the placeholders with real photos
-Currently tiles are stylized placeholders.
-To use real images:
-1) Put images in `assets/img/`
-2) In `assets/css/styles.css`, replace `.tile::before` background with `background-image: url(...)` for each tile,
-   OR (best) convert tiles to actual <img> tags.
+## Deployment
+- GitHub Pages
+- Netlify
+- Vercel
 
-If you want, send 10–20 best photos and I’ll wire a real gallery.
-
-## 🚀 Deploy (easy)
-- GitHub Pages: upload files to a repo → Settings → Pages → Deploy from branch
-- Netlify: drag & drop the folder into Netlify
-- Vercel: static deployment works too
-
+Any static hosting provider will work.
